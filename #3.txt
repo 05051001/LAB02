@@ -1,0 +1,100 @@
+#define NUM 8 // 首先定義LED的數目
+byte SW=6;
+void Mod1();
+void Mod2();
+
+int leds[NUM] = {
+  8,9,10,11,12,13,14,15
+};
+
+
+void setup() {                
+  for(int i = 0; i < NUM; i++){
+    pinMode(leds[i], OUTPUT); 
+  }
+  pinMode(SW, INPUT)  ;   
+}
+
+void loop() {
+  boolean val =digitalRead(SW);
+  if(val)
+    Mod1();
+  else
+  Mod2();
+  
+}
+
+void Mod1(){
+  for(int i = 0; i < NUM; i++){
+    digitalWrite(leds[i], HIGH);
+    delay(100);
+    digitalWrite(leds[i], LOW);
+  }
+  for(int i = NUM-1; i >= 0; i--){
+    digitalWrite(leds[i], HIGH);
+    delay(100);
+    digitalWrite(leds[i], LOW);
+  } 
+  }
+void Mod2(){
+  for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], HIGH);
+    
+  }
+  delay(200);
+  
+  for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], LOW);
+    
+  }
+  delay(200);
+    for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], HIGH);
+    
+  }
+  delay(200);
+  
+  for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], LOW);
+    
+  }
+  delay(200);
+  //
+  
+  for(int i = 0; i < NUM; i++){
+    digitalWrite(leds[i], HIGH);
+    delay(100);
+    digitalWrite(leds[i], LOW);
+    
+  }
+  delay(100);
+    //
+  for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], HIGH);
+    
+  }
+  delay(200);
+  
+  for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], LOW);
+    
+  }
+  delay(200);
+    for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], HIGH);
+    
+  }
+  delay(200);
+  
+  for (int i=0;i < NUM; i++){
+    digitalWrite(leds[i], LOW);
+    
+  }
+  delay(200);
+  for(int i = NUM-1; i >= 0; i--){
+    digitalWrite(leds[i], HIGH);
+    delay(100);
+    digitalWrite(leds[i], LOW);
+      }
+  delay(100);
+  }
